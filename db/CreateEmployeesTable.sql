@@ -14,11 +14,11 @@ CREATE TABLE Employees(
   FOREIGN KEY (warehouse_id) REFERENCES Warehouse(warehouse_id)
 );
 
-INSERT INTO Employees (FNAME, LNAME, PASSWORD, PHONE, EMPLOYEE_SIN, EMAIL, WAREHOUSE_ID, ADDRESS, POSITION)
-VALUES (‘Penny’, 'Peaches', ‘happy’, '613-555-0139', 123456789, ‘p@abc.com’, 5, ‘12 Rand Ave.’, ‘Senior Manager’);
+INSERT INTO Employees (fname, lname, password, phone, employee_sin, email, warehouse_id, address, position)
+VALUES ('Penny', 'Peaches', 'happy', '613-555-0139', 123456789, 'p@abc.com', 5, '12 Rand Ave.', 'Manager');
 
-INSERT INTO Employees (FNAME, LNAME, PASSWORD, PHONE, EMPLOYEE_SIN, EMAIL, WAREHOUSE_ID, ADDRESS, POSITION)
-VALUES (‘Issey’, 'Miyaki', ‘sad’, '780-555-0159', 987364990, ‘i@bob.com’, 2, ‘245 Nowhere Street’, ‘Cashier’);
+INSERT INTO Employees (fname, lname, password, phone, employee_sin, email, warehouse_id, address, position)
+VALUES ('Issey', 'Miyaki', 'sad', '780-555-0159', 987364990, 'i@bob.com', 2, '245 Nowhere Street', 'Cashier');
 
-INSERT INTO Employees (FNAME, LNAME, PASSWORD, PHONE, EMPLOYEE_SIN, EMAIL, WAREHOUSE_ID, ADDRESS, POSITION)
-VALUES (‘Matt’, 'LeBlanc', ‘sun’, '418-555-0169', 937463745, ‘m@tim.com’, ‘5’, ‘152 Penny Lane’, ‘Manager’);
+INSERT INTO Employees (fname, lname, password, phone, employee_sin, email, warehouse_id, address, position)
+VALUES ('Matt', 'LeBlanc', 'sun', '418-555-0169', 937463745, 'm@tim.com', 5, '152 Penny Lane', 'Manager');
