@@ -6,7 +6,7 @@ item_quantity INTEGER,
 customer_id SERIAL,
 PRIMARY KEY (cart_id, customer_id),
 FOREIGN KEY (customer_id) REFERENCES Customers(customer_id),
-FOREIGN KEY (item_id) REFERENCES Item(item_id));
+FOREIGN KEY (item_id) REFERENCES Items(item_id));
 
 INSERT INTO Cart (item_id, item_quantity, customer_id)
 VALUES (1, 5, 1);

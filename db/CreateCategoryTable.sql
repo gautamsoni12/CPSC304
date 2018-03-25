@@ -5,16 +5,16 @@ name VARCHAR(50) NOT NULL,
 PRIMARY KEY (category_id));
 
 INSERT INTO Category (name)
-VALUES (Clothes);
+VALUES ('Clothes');
 
 INSERT INTO Category (name)
-VALUES (Hats);
+VALUES ('Hats');
 
 INSERT INTO Category (name)
-VALUES (Toiletries);
+VALUES ('Toiletries');
 
 INSERT INTO Category (name)
-VALUES (Household);
+VALUES ('Household');
 
 INSERT INTO Category (name)
-VALUES (Electronics);
+VALUES ('Electronics');
