@@ -12,5 +12,6 @@ router.use(users)
 // Added these but not sure if needed (Azlan)
 router.use(employees)
 router.use(warehouse)
+router.use(cart)
 
 export default router

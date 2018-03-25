@@ -15,3 +15,7 @@ module.exports.Warehouse = Warehouse;
 var UserMeta = require('./customers');
 var Users = connection.define('customers', UserMeta.attributes, UserMeta.options);
 module.exports.Customers = Customers;
+
+var UserMeta = require('./cart');
+var Users = connection.define('cart', UserMeta.attributes, UserMeta.options);
+module.exports.Cart = Cart;

@@ -11,7 +11,7 @@ var attributes = {
         validate: {
             is: ["^[a-z]+$",'i'],
         }
-    }
+    },
     lname: {
         type: Sequelize.STRING,
         validate: {
