@@ -7,7 +7,7 @@ password VARCHAR(32) NOT NULL,
 phone VARCHAR(22),
 email VARCHAR(320) UNIQUE,
 creditcard VARCHAR(16),
-address	VARCHAR(50),
+address VARCHAR(50),
 cart_id SERIAL,
 PRIMARY KEY (customer_id),
 FOREIGN KEY (customer_id, cart_id) REFERENCES Cart(customer_id, cart_id));
