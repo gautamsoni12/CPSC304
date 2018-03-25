@@ -11,8 +11,7 @@ CREATE TABLE Employees(
   address VARCHAR(50),
   position VARCHAR(50),
   PRIMARY KEY (employee_id),
-  FOREIGN KEY (warehouse_id) REFERENCES Warehouse(warehouse_id)
-);
+  FOREIGN KEY (warehouse_id) REFERENCES Warehouse(warehouse_id));
 
 INSERT INTO Employees (fname, lname, password, phone, employee_sin, email, warehouse_id, address, position)
 VALUES ('Penny', 'Peaches', 'happy', '613-555-0139', 123456789, 'p@abc.com', 5, '12 Rand Ave.', 'Manager');
