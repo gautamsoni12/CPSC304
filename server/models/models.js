@@ -11,3 +11,7 @@ module.exports.Employees = Employees;
 var UserMeta = require('./warehouse');
 var Users = connection.define('warehouse', UserMeta.attributes, UserMeta.options);
 module.exports.Warehouse = Warehouse;
+
+var UserMeta = require('./customers');
+var Users = connection.define('customers', UserMeta.attributes, UserMeta.options);
+module.exports.Customers = Customers;

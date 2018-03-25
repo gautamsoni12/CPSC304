@@ -1,7 +1,7 @@
 var Sequelize = require('sequelize');
 
 var attributes = {
-    employee_id: {
+    customer_id: {
         type: Sequelize.INTEGER,
         autoIncrement: true,
         primaryKey: true,
@@ -11,7 +11,7 @@ var attributes = {
         validate: {
             is: ["^[a-z]+$",'i'],
         }
-    },
+    }
     lname: {
         type: Sequelize.STRING,
         validate: {
@@ -25,29 +25,29 @@ var attributes = {
         type: Sequelize.INTEGER,
         isNumeric: true,
     },
-    employee_sin: {
-        type: Sequelize.STRING,
-        isNumeric: true,
-        len: [9,9],
-    },
     email: {
         type: Sequelize.STRING,
         validate: {
           isEmail: true,
         }
     },
-    warehouse_id: {
-        type: Sequelize.INTEGER,
-        references: {
-          model: Warehouse,
-          key: warehouse_id,
+    creditcard: {
+        type: Sequelize.STRING,
+        isNumeric: true,
+        validate: {
+          isCreditCard: true,
+          len: [16,16],
         }
-    }
+    },
     address: {
         type: Sequelize.STRING,
     },
-    position: {
-        type: Sequelize.STRING,
+    cart_id: {
+        type: Sequelize.INTEGER,
+        references: {
+          model: Cart,
+          key: cart_id,
+        }
     }
 };
 
