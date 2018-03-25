@@ -3,6 +3,13 @@ import { Router } from 'express'
 import users from './users'
 import employees from './employees'
 import warehouse from './warehouse'
+import customers from './customers'
+import cart from './cart'
+import items from './items'
+import category from './category'
+import loyalty from './loyalty'
+
+
 
 const router = Router()
 
