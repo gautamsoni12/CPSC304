@@ -2,8 +2,8 @@
 # You should not commit this file!
 # Everytime you change this file, you should run `source env_setup`
 
-export DB_NAME=Demo
-export DB_USER=postgres
-export DB_PASSWORD=postgres
-export DB_HOST=localhost
+export DB_NAME=qirawywi
+export DB_USER=qirawywi
+export DB_PASSWORD=jV9wLDvzBeQt5vIP-DMODjEscAbkgbiR
+export DB_HOST=baasu.db.elephantsql.com
 export DB_PORT=5432

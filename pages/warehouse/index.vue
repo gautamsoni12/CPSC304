@@ -3,14 +3,12 @@
     <div class="content">
       <div class="subsection">
         <div style="margin: 25px 10px;">
-          <span class="subsection-title" style="vertical-align: middle;">Cart info</span>
-          <nuxt-link class="button--grey" style="padding: 5px 20px; text-decoration: none;" to="/users/add">Add User</nuxt-link>
+          <span class="subsection-title" style="vertical-align: middle;">Warehouse in Database</span>
+          <nuxt-link class="button--grey" style="padding: 5px 20px; text-decoration: none;" to="/warehouse/add">Add Warehouse</nuxt-link>
         </div>
         <ul style="list-style-type: none; padding: 0; margin: 0;">
-          <li v-for="(user, index) in users" :key="index" style="padding: 10px 20px; margin: 0 25px; position: relative;">
-            <nuxt-link :to="{ path: `/users/${user.username}`, params: { username: user.username }}">
-              {{ user.userid + ' ' + user.username }}
-            </nuxt-link>
+          <li v-for="w in warehouse" :key="index" style="padding: 10px 20px; margin: 0 25px; position: relative;">
+              {{ w.address }}
           </li>
         </ul>
       </div>
@@ -23,13 +21,13 @@ import axios from '~/plugins/axios'
 
 export default {
   async asyncData () {
-    let { data } = await axios.get('/api/users')
-    return { users: data }
+    let { data } = await axios.get('/api/warehouse')
+    return { warehouse: data }
   },
 
   head () {
     return {
-      title: 'Users'
+      title: 'Warehouse'
     }
   }
 }
