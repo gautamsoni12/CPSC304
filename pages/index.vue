@@ -7,6 +7,9 @@
       </h1>
       <div class="links">
         <nuxt-link class="button--grey link" style="margin-left: 15px;" to="/users">View Users</nuxt-link>
+        <nuxt-link class="button--grey link" style="margin-left: 15px;" to="/customers">View Customers</nuxt-link>
+        <nuxt-link class="button--grey link" style="margin-left: 15px;" to="/warehouse">View Warehouse</nuxt-link>
+
       </div>
     </div>
   </section>
