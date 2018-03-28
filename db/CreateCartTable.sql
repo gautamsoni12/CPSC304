@@ -8,9 +8,9 @@ PRIMARY KEY (cart_id),
 FOREIGN KEY (customer_id) REFERENCES Customers(customer_id),
 FOREIGN KEY (item_id) REFERENCES Items(item_id));
 
-INSERT INTO Cart (item_id, item_quantity, customer_id)
-VALUES (1, 5, 1);
-INSERT INTO Cart (item_id, item_quantity, customer_id)
-VALUES (2, 3, 1);
-INSERT INTO Cart (item_id, item_quantity, customer_id)
-VALUES (3, 1, 2);
+INSERT INTO Cart (cart_id, item_id, item_quantity, customer_id)
+VALUES (1, 1, 5, 1);
+INSERT INTO Cart (cart_id, item_id, item_quantity, customer_id)
+VALUES (2, 2, 3, 1);
+INSERT INTO Cart (cart_id, item_id, item_quantity, customer_id)
+VALUES (3, 3, 1, 2);

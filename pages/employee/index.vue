@@ -3,13 +3,43 @@
     <div class="content">
       <div class="subsection">
         <div style="margin: 25px 10px;">
-          <span class="subsection-title" style="vertical-align: middle;">Users in Database</span>
+          <span class="subsection-title" style="vertical-align: middle;">Employees in Database</span>
+          <nuxt-link class="button--grey" style="padding: 5px 20px; text-decoration: none;" to="/employee/all_warehouses">Warehosues</nuxt-link>
+
         </div>
-        <ul style="list-style-type: none; padding: 0; margin: 0;">
-          <li v-for="e in employees" :key="index" style="padding: 10px 20px; margin: 0 25px; position: relative;">
-              {{ e.fname + '' + e.lname }}
-          </li>
-        </ul>
+        <table style="padding:30px">
+          <tr>
+            <th>Name</th>
+            <th>Phone</th>
+            <th>Email</th>
+            <th>Employee_Sin</th>
+            <th>Position</th>
+            <th>Address</th>
+          </tr>
+          <tr v-for="e in employees" >
+              <td>
+                {{ e.fname + ' '+ e.lname }}
+              </td>
+              <td>
+                {{ e.phone }}
+              </td>
+              <td>
+                {{ e.email }}
+              </td>
+              <td>
+                {{ e.employee_sin }}
+              </td>
+              <td>
+                {{ e.position }}
+              </td>
+              <td>
+                {{ e.address }}
+              </td>
+            </tr>
+
+
+
+        </table>
       </div>
     </div>
   </section>

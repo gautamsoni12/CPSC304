@@ -7,7 +7,7 @@
         </div>
         <ul style="list-style-type: none; padding: 0; margin: 0;">
           <li v-for="c in category" :key="index" style="padding: 10px 20px; margin: 0 25px; position: relative;">
-              {{ c.category_id }}
+              {{ c.category_id + '&nbsp&nbsp&nbsp&nbsp' + c.name }}
           </li>
         </ul>
       </div>
