@@ -2,9 +2,9 @@
   <section class="user-view">
     <div class="content">
       <div class="subsection">
-      {{ user.username }}
-        <span class="user-password" style="padding: 10px 10px; margin: 10px 0 10px 0;">{{ `(${user.password})` }}</span>
-        <nuxt-link :to="{ path: `/users/${user.username}/update`, params: { username: user.username }}">Update</nuxt-link>
+        <span class="user-username" style="padding: 10px 0 10px 10px; margin: 10px 0 10px 0;">{{w.address}}</span>
+      {{ `(${w.address})` }}
+        <nuxt-link :to="{ path: `/warehouse/${w.address}/update`, params: { address: w.address }}">Update</nuxt-link>
       </div>
     </div>
   </section>
@@ -14,11 +14,11 @@
 import axios from '~/plugins/axios'
 
 export default {
-  name: 'username',
+  name: 'warehouse',
   asyncData ({ params, error }) {
-    return axios.get('/api/users/' + params.username)
+    return axios.get('/api/warehouse/' + params.address)
       .then((res) => {
-        return { user: res.data }
+        return { warehouse: res.data }
       })
       .catch((e) => {
         error({ statusCode: 404, message: 'User not found' })
@@ -26,7 +26,7 @@ export default {
   },
   head () {
     return {
-      title: `User: ${this.user.username}`
+      title: `Warehouse: ${this.w.address}`
     }
   }
 }
@@ -52,13 +52,9 @@ export default {
     margin 25px 10px
     font-size 26px
     font-weight 500
-  .user-username
+  .w-address
     font-size 24px
     font-weight 500
-  .user-password
-    font-size 24px
-    font-weight 500
-    color #707070
   a
     text-decoration underline
     &:hover
