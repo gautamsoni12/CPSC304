@@ -3,12 +3,15 @@
     <div class="content">
       <div class="subsection">
         <div style="margin: 25px 10px;">
-          <span class="subsection-title" style="vertical-align: middle;">Warehouse in Database</span>
+          <span class="subsection-title" style="vertical-align: middle;">Warehouses in Database</span>
           <nuxt-link class="button--grey" style="padding: 5px 20px; text-decoration: none;" to="/warehouse/add">Add Warehouse</nuxt-link>
         </div>
         <ul style="list-style-type: none; padding: 0; margin: 0;">
-          <li v-for="w in warehouse" :key="index" style="padding: 10px 20px; margin: 0 25px; position: relative;">
-              {{ w.address }}
+
+          <li v-for="w in warehouse" style="padding: 10px 20px; margin: 0 25px; position: relative;">
+          <nuxt-link :to="{ path: `/warehouse/${w.warehouse_id}?id=${w.warehouse_id}`, params: { warehouse_id: w.warehouse_id }}">
+          {{ w.warehouse_id + ' ' + ' ' + w.address }}
+          </nuxt-link>
           </li>
         </ul>
       </div>

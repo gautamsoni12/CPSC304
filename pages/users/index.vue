@@ -1,3 +1,22 @@
+Skip to content
+This repository
+Search
+Pull requests
+Issues
+Marketplace
+Explore
+ @Varunvamsi
+Sign out
+3
+1 10 ajmustapha/CPSC-304---GoShopping
+forked from belinghy/cpsc304-project-starter
+ Code  Pull requests 0  Projects 0  Wiki  Insights
+CPSC-304---GoShopping/pages/users/index.vue
+992114f  a day ago
+@tejasvi-mehra tejasvi-mehra here
+@tejasvi-mehra @belinghy
+
+66 lines (58 sloc)  1.5 KB
 <template>
   <section class="users-view">
     <div class="content">
@@ -20,13 +39,11 @@
 
 <script>
 import axios from '~/plugins/axios'
-
 export default {
   async asyncData () {
     let { data } = await axios.get('/api/users')
     return { users: data }
   },
-
   head () {
     return {
       title: 'Users'
@@ -38,11 +55,9 @@ export default {
 <style lang="stylus" scoped>
 .users-view
   padding-top 0
-
 .content
   position absolute
   width 100%
-
 .subsection
   background-color #fff
   border-radius 2px
@@ -61,5 +76,17 @@ export default {
     text-decoration underline
     &:hover
       color #515ec4
-
 </style>
+© 2018 GitHub, Inc.
+Terms
+Privacy
+Security
+Status
+Help
+Contact GitHub
+API
+Training
+Shop
+Blog
+About
+Press h to open a hovercard with more details.
