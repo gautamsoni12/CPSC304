@@ -7,7 +7,7 @@
         </div>
         <ul style="list-style-type: none; padding: 0; margin: 0;">
           <li v-for="e in employees" :key="index" style="padding: 10px 20px; margin: 0 25px; position: relative;">
-              {{ e.fname + ' ' + e.lname +'&nbsp&nbsp&nbsp&nbsp' + e.address }}
+              {{ e.name +'&nbsp&nbsp&nbsp&nbsp' + e.address }}
           </li>
         </ul>
       </div>

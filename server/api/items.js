@@ -17,7 +17,7 @@ router.get('/items', function (req, res, next) {
 
 router.post('/items/count', bodyParser.json(), function (req, res, next) {
   const category_name = req.body.data.category_name
-  const query = 'SELECT Category.category_name, COUNT(Items.name) from Items INNER JOIN Category on Items.category_id=Category.category_id WHERE Category.name=:category_name;'
+  const query = 'SELECT COUNT(Items.item_name) from Items INNER JOIN Category on Items.category_id=Category.category_id WHERE Category.category_name=:category_name;'
   connection.query(query,
     {
       type: connection.QueryTypes.SELECT,

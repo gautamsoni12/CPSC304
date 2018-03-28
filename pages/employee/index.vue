@@ -18,7 +18,7 @@
           </tr>
           <tr v-for="e in employees" >
               <td>
-                {{ e.fname + ' '+ e.lname }}
+                {{ e.name }}
               </td>
               <td>
                 {{ e.phone }}
