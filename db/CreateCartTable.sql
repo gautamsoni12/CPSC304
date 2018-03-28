@@ -1,10 +1,10 @@
 DROP TABLE IF EXISTS Cart;
 CREATE TABLE Cart(
   cart_id SERIAL,
-item_id INTEGER,
-item_quantity INTEGER,
-customer_id SERIAL,
-PRIMARY KEY (cart_id, customer_id),
+item_id INTEGER NOT NULL,
+item_quantity INTEGER NOT NULL,
+customer_id INTEGER NOT NULL,
+PRIMARY KEY (cart_id),
 FOREIGN KEY (customer_id) REFERENCES Customers(customer_id),
 FOREIGN KEY (item_id) REFERENCES Items(item_id));
 
