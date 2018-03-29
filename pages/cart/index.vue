@@ -8,7 +8,7 @@
         </div>
         <ul style="list-style-type: none; padding: 0; margin: 0;">
           <li v-for="c in cart" :key="index" style="padding: 10px 20px; margin: 0 25px; position: relative;">
-            {{ c.cart_id + ' ' + c.customer_id + ' ' + c.item_id + ' ' + c.cart_quantity }}
+            {{ c.cart_id + '               ' + c.customer_id + '                ' + c.item_id + '             ' + c.cart_quantity }}
           </li>
         </ul>
       </div>
