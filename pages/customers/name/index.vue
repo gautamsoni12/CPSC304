@@ -4,20 +4,24 @@
     <div class="subsection">
     <form style="margin: 15px 15px;">
       <div style="margin: 10px 0;">
-        <span class="user-username">Username: </span>
-        <input type="text" :value="username" v-model="username"></input>
-      </div>
-      <div style="margin: 10px 0;">
-        <span class="user-password">Password: </span>
-        <input type="password" v-model="password"></input>
+        <span class="customer-fname">Enter Name: </span>
+        <input type="text" :value="fname" v-model="fname"></input>
       </div>
     </form>
-    <button type="button" class="button--grey" @click="submitInsert">Add User</button>
+    <button type="button" class="button--grey" @click="submitSearch">Search Customer</button>
+
+    <ul style="list-style-type: none; padding: 0; margin: 0;">
+      <li v-for="customer in customers" style="padding: 10px 20px; margin: 0 25px; position: relative;">
+      {{ customer.name + '&nbsp&nbsp&nbsp&nbsp' + customer.phone + '&nbsp&nbsp&nbsp&nbsp' + customer.address }}
+      </li>
+    </ul>
+
     </div>
   </div>
   </section>
-</template>
 
+
+</template>
 <script>
 import axios from '~/plugins/axios'
 
@@ -25,30 +29,32 @@ export default {
 
   data () {
     return {
-      userid: '',
-      username: '',
-      password: ''
+      customers: '',
+      fname: 'Search'
     }
   },
 
-  methods: {
-    submitInsert () {
-      let self = this
+  // async asyncData () {
+  //   let { data } = await axios.get('/api/customers/name')
+  //   return { customers: data }
+  // },
 
-      axios.post('/api/users/add', {
+  methods: {
+    submitSearch () {
+      let self = this
+      axios.post('/api/customers/name', {
         headers:
           {
             'Content-Type': 'application/json'
           },
         data:
-          {
-            userid: self.userid,
-            username: self.username,
-            password: self.password
-          }})
+        {
+          name: self.fname
+        }})
         .then((res) => {
           // res.data should contain the url for redirecting... bad practice
-          self.$nuxt.$router.replace({ path: res.data })
+          this.customers = (res.data)
+          console.log(this.customers)
         })
         .catch((e) => {
           console.log(e)
@@ -58,7 +64,7 @@ export default {
 
   head () {
     return {
-      title: `Add New User`
+      title: `Search`
     }
   }
 }

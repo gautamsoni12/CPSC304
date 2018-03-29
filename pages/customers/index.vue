@@ -4,11 +4,11 @@
       <div class="subsection">
         <div style="margin: 25px 10px;">
           <span class="subsection-title" style="vertical-align: middle;">Customers in Database</span>
-          <nuxt-link class="button--grey" style="padding: 5px 20px; text-decoration: none;" to="/customers/add">Add Customer</nuxt-link>
+          <nuxt-link class="button--grey" style="padding: 5px 20px; text-decoration: none;" to="/customers/name">Search Customer</nuxt-link>
         </div>
         <ul style="list-style-type: none; padding: 0; margin: 0;">
-          <li v-for="customer in customers" :key="index" style="padding: 10px 20px; margin: 0 25px; position: relative;">q
-          {{ customer.customer_id + ' ' + customer.fname + ' ' + customer.lname + ' ' + customer.address + ' ' + customer.email }}
+          <li v-for="customer in customers" :key="index" style="padding: 10px 20px; margin: 0 25px; position: relative;">
+          {{ customer.customer_id + ' ' + customer.name + ' ' + customer.address + ' ' + customer.email + ' ' + customer.phone }}
           </li>
         </ul>
       </div>

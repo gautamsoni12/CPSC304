@@ -3,11 +3,11 @@
     <div class="content">
       <div class="subsection">
         <div style="margin: 25px 10px;">
-          <span class="subsection-title" style="vertical-align: middle;">Category in Database</span>
+          <span class="subsection-title" style="vertical-align: middle;">Employees with Warehouse Address in Database</span>
         </div>
         <ul style="list-style-type: none; padding: 0; margin: 0;">
-          <li v-for="c in category" :key="index" style="padding: 10px 20px; margin: 0 25px; position: relative;">
-              {{ c.category_id + '&nbsp&nbsp&nbsp&nbsp' + c.category_name }}
+          <li v-for="e in employees" :key="index" style="padding: 10px 20px; margin: 0 25px; position: relative;">
+              {{ e.name +'&nbsp&nbsp&nbsp&nbsp' + e.address }}
           </li>
         </ul>
       </div>
@@ -20,13 +20,13 @@ import axios from '~/plugins/axios'
 
 export default {
   async asyncData () {
-    let { data } = await axios.get('/api/category')
-    return { category: data }
+    let { data } = await axios.get('/api/employees')
+    return { employees: data }
   },
 
   head () {
     return {
-      title: 'Category'
+      title: 'Employee'
     }
   }
 }

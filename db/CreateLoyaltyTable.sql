@@ -1,6 +1,6 @@
 DROP TABLE IF EXISTS Loyalty;
 CREATE TABLE Loyalty(
-    customer_id SERIAL,
+    customer_id INTEGER,
   points INTEGER,
   PRIMARY KEY (customer_id),
   FOREIGN KEY (customer_id) REFERENCES Customers(customer_id));

@@ -14,4 +14,13 @@ router.get('/employees', function (req, res, next) {
     })
 })
 
+router.get('/employees/all_warehouses', function(req, res, next){
+  const query = 'SELECT employees.fname , employees.lname , warehouse.address, warehouse.warehouse_id FROM employees INNER JOIN warehouse ON employees.warehouse_id=warehouse.warehouse_id;'
+  connection.query(query, { type: connection.QueryTypes.SELECT })
+    .then(result => {
+      console.log(result)
+      res.json(result)
+    })
+})
+
 export default router

@@ -8,9 +8,7 @@ phone VARCHAR(22),
 email VARCHAR(320) UNIQUE,
 creditcard VARCHAR(16),
 address VARCHAR(50),
-cart_id SERIAL,
-PRIMARY KEY (customer_id),
-FOREIGN KEY (customer_id, cart_id) REFERENCES Cart(customer_id, cart_id));
+PRIMARY KEY (customer_id));
 
 INSERT INTO Customers (fname, lname, password, phone, email, creditcard, address)
 VALUES ('Ashley', 'Barnes', 'password', '123-456-7899', 'a@abc.com', 1234123412341235, '1 Rand Ave.');
